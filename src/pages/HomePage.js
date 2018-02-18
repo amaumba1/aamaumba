@@ -1,9 +1,19 @@
-import React from 'react';
 
-const HomePage = () => (
-    <div>
-        <h1>Welcome</h1>
-        <p>This is my  site. Take a look around</p>
+import React from 'react';
+import Header from '../layout/Header';
+import Features from '../layout/Features';
+import Footer from '../layout/Footer';
+import ProfileHeader from '../layout/ProfileHeader';
+
+//import { Link } from 'react-router-dom';
+
+
+const HomePage = (props) => (
+    <div className="container">
+            <Header/> 
+            <ProfileHeader /> 
+            <Features />
+            <Footer /> 
     </div>
 )
 

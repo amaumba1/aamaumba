@@ -1,0 +1,53 @@
+%heading {
+    font-family: $font-display;
+    font-weight: 300;
+    
+}
+
+.heading-primary {
+    @extend %heading;
+    line-height: 1;
+    color:  $color-white;
+
+    //text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size:  6rem;
+        font-weight: 400;
+        letter-spacing: 1.5rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 4s;
+        animation-timing-function: ease-out;
+
+       
+    
+        /* animation-delay: 1s; 
+        animation-iteration-count: 3;  */
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        padding-top: 2rem;
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: 1rem;
+        animation: moveInRight 4s ease-out;
+
+       
+    }
+}
+
+.heading-4 {
+    @extend %heading;
+    //font-size: 1.9rem;
+    //color: black;
+
+    &--light { color: $color-grey-light-1; }
+    &--dark { color: $color-grey-dark-1; }
+}

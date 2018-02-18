@@ -1,0 +1,108 @@
+
+// *,
+// *::before,
+// *::after {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: inherit;
+// }
+
+// html {
+//     box-sizing: border-box;
+//     font-size: 62.5%;   // 16 * 0.625 = 10 // 10px/16px = 62.5% -> 1rem = 10px 
+      
+// }
+
+
+// body {
+//     //font-family: helvetica, Arial, sans-serif;
+//     font-family: $font-primary;
+//     color: $color-grey-dark-2;
+//     font-weight: 300;
+//     line-height: 1.6;
+//     //font-size: $medium-size;  
+// }
+
+// .challenge {
+
+//     width: 1000px;
+//     margin: 30px auto;
+
+
+//     display: grid;
+//     grid-template-rows:  100px 200px 
+//     400px 100px;
+//     grid-template-columns: repeat(3, 1fr) 200px;
+//     grid-gap: 30px;
+
+//     & > * {
+//         background-color: orangered;
+//         padding: 20px;
+//         color: white;
+//         font-size: 30px;
+//         font-family: sans-serif;
+//     }
+
+//     .header {
+//         grid-column: 1 / -1;
+//     }
+// }
+
+// button {
+//     cursor: pointer;
+// }
+
+// button:disabled {
+//     cursor: default;
+// }
+
+// .is-active {
+//     font-weight: bold;
+// }
+
+
+// METHOD 2: LINE NAMES
+
+// for rows they act as column and colums act as rows 
+
+.challenge {
+    //width: 1000px;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-rows: [header-start-onOne] 400px [header-end-onTwo box-start-onTwo]200px 
+    [box-end-onThree main-start-onThree]400px [main-end-onFour footer-start-onFour]100px [footer-end-onFive];
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+    grid-gap: 30px;
+
+    & > * {
+        background-color: orangered;
+        padding: 20px;
+        color: white;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+
+    .header1 {
+        grid-column: col-start 1 / grid-end;
+    }
+
+    .main-content {
+        grid-column: 1 / span 3;
+    }
+
+    .footer {
+        grid-column: 1 / -1;
+    }
+}
+
+//     .main-content {
+//         grid-column: col-start 1 / col-end 3;
+//     }
+
+//     .footer1 {
+//         grid-column: col-start 1 / grid-end;
+//     }
+// }
+
+

@@ -1,0 +1,15 @@
+.header {
+    background-color: $color-grey-dark-1;
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(rgba($color-secondary, .90), rgba($color-secondary, .60)), url(/../../img/backgroundpic1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10rem;
+    padding-top: 4rem;
+
+    display: grid;
+    grid-template-rows: 1fr min-content 6rem 1fr;
+    grid-row-gap: 1.5rem;
+    
+}
+
